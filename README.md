@@ -67,5 +67,40 @@ chartCategoricalColors1 = [
 [theme.sidebar]
 backgroundColor = "#1E3A5F"
 secondaryBackgroundColor = "#1B263B"
-headingFontSizes = ["1.6rem", "1.4rem", "1.2rem"]
 dataframeHeaderBackgroundColor = "#1A2A40"
+headingFontSizes = ["1.6rem", "1.4rem", "1.2rem"]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Acabo de finalizar el desarrollo de una aplicación interactiva construida en Python y Streamlit para el análisis integral del mercado laboral.
+La herramienta procesa bases de datos de empleo, desocupación, subocupación e informalidad, y permite explorar los indicadores a través de visualizaciones avanzadas y modelos estadísticos.
+
+El proyecto integra un stack potente: pandas, numpy, polars, scikit-learn, scipy, statsmodels, plotly, matplotlib, great-tables y gt-extras, lo que posibilita un flujo analítico completo y altamente performante (tal vez con modelos no tan complejos como la app que publique anteriormente).
+- Características principales del dashboard:
+• Reporte analítico por categorías y tendencias históricas
+Tablas dinámicas y estilizadas con Great Tables para explorar la evolución de los indicadores laborales.
+• Visualizaciones avanzadas
+Sunburst, Treemap, series temporales interactivas, heatmaps y gráficos radar para un entendimiento intuitivo del comportamiento de las tasas laborales.
+• Módulo estadístico avanzado
+Distribuciones y probabilidades
+Clustering y correlaciones (K-Means, Isolation Forest, StandardScaler)
+Modelos temporales (STL, ARIMA)
+Detección de anomalías y patrones
+• Dashboard unificado
+Un panel final que resume los principales hallazgos mediante gráficos interactivos y métricas clave.
+Este proyecto demuestra cómo el ecosistema Python puede transformar datos complejos en información accesible y accionable, ideal para análisis económico, gestión pública o monitoreo del mercado laboral.
+
+
+link de los codigos que utilice para la página de inicio y salida de la app
+animación de clave 
+https://codepen.io/jh3y/pen/JjxPKXz
+encriptación de clave
+https://codepen.io/dspstudio/pen/OPJZMKX
+
+video demo 
+
+
+
+https://github.com/user-attachments/assets/0f41b6c8-dc7e-453c-b62f-c54617e6cf07
+
+
+

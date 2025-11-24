@@ -8,6 +8,21 @@ import numpy as np
 # --- Configuración general ---
 st.set_page_config(layout="wide", page_title="Analsis de Informalidad Laboral", page_icon="icons/busqueda-de-trabajo.png")
 
+
+hide_sidebar_style = """
+    <style>
+        /* Oculta la barra lateral completa */
+        [data-testid="stSidebar"] {
+            display: none;
+        }
+        /* Ajusta el área principal para usar todo el ancho */
+        [data-testid="stAppViewContainer"] {
+            margin-left: 0px;
+        }
+    </style>
+"""
+st.markdown(hide_sidebar_style, unsafe_allow_html=True)
+
 # ==============================================================================
 # CARGA Y LIMPIEZA DEL ARCHIVO
 # ==============================================================================
@@ -958,3 +973,60 @@ with st.expander("Modelo Estadístico Avanzado", expanded=False, icon=":material
                 st.warning('Error IsolationForest: '+str(e))
 
     st.markdown('---')
+
+
+# --- Inportando librerias y codigo para acceder a botones de redireccionamiento a otras opciones de Menú ---
+
+import base64
+from pathlib import Path
+from streamlit.components.v1 import html
+import streamlit.components.v1 as components
+
+
+# --- Inyectar CSS desde archivo ---
+with open("assets/style.css","r", encoding="utf-8") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+st.write("###")
+st.write("---")
+
+with st.expander("Acceso a botones del Menú", expanded=False, icon=":material/auto_stories:", width="stretch"):
+    # Centrar botones con columnas para acceso a otras páginas
+    with st.container(border=True):
+            col4, col5, col6 = st.columns([2, 2, 2])
+
+            with col4:
+                if st.button("Empleo", key="btn", use_container_width=True):
+                    st.switch_page("pages/1_empleo.py")
+
+            with col5:    
+                if st.button("Desocupación", key="btn-liquid", use_container_width=True):
+                    st.switch_page("pages/2_desocupacion.py")
+
+            with col6:
+                if st.button("Subocupación", key="btn-glitch", use_container_width=True):
+                    st.switch_page("pages/3_subocupacion.py")
+
+
+    # Centrar botones con columnas vacías a los lados
+    with st.container(border=True):
+            col1, col2, col3 = st.columns([1, 2, 1])
+
+            with col1:
+                pass  # espacio en blanco
+
+            with col2:
+                b1, b2 = st.columns(2)
+
+                with b1:
+                    if st.button("Inicio", key="main", use_container_width=True):
+                        st.switch_page("main.py")
+
+                with b2:
+                    if st.button("Salir", key="exit", use_container_width=True):
+                        st.switch_page("pages/5_salir.py")
+
+            with col3:
+                pass  # espacio en blanco
+
+

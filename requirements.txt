@@ -1,0 +1,11 @@
+streamlit
+pandas
+numpy
+polars
+plotly
+matplotlib
+scipy
+scikit-learn
+statsmodels
+great-tables
+gt-extras

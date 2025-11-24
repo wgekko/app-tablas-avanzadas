@@ -527,13 +527,10 @@ setTimeout(playAnimation, 1000);
 st.components.v1.html(html_code, height=600, scrolling=False)
 
 
-
-
 # --- Inyectar CSS desde archivo ---
-with open("assets/style.css") as f:
+with open("assets/style.css","r", encoding="utf-8") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-import streamlit as st
 
 with st.container():
 
@@ -561,7 +558,7 @@ with st.container():
     # --- Contenedor principal ---
     with st.container():
 
-        col1, col2, col3 = st.columns([2, 2, 2])
+        col1, col2, col3 = st.columns([1, 2, 1])
 
         with col2:
             if not st.session_state.ingreso:

@@ -709,3 +709,331 @@
 		--yellow-x: 45%; --yellow-y: -15%;
 	}
 }
+
+/*animacion de boton inicio - redireccion de pagina */
+
+
+.st-key-main button {
+    width: 200px;	
+	/*width: fit-content;*/
+	font-size: 2rem;
+	position: relative;
+	margin: 2rem;
+	padding: 1rem 1rem;
+	color: rgb(221, 173, 17);
+	border: 3px solid transparent;
+	border-radius: 60px;
+	background-color: rgb(6, 69, 73);
+	background-image: linear-gradient(to bottom right, rgb(10,107,115), rgb(2, 10, 14)), linear-gradient(125deg, rgba(255,255,255,0) 45%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 53%);
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
+	background-size: 100%, 200%;
+	background-position: 0px, -250px;
+	animation: 4s border-glint linear backwards infinite;
+	animation-delay: 1s;
+	box-shadow: rgba(0,0,0,0.6) 8px 8px 8px;
+	text-shadow: 0px 0px 4px rgba(255,255,255,0.1);
+	transition: box-shadow 0.25s, text-shaddw 0.25s;
+	overflow: hidden;
+}
+
+.st-key-main button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to bottom right, rgb(24, 77, 177), rgb(24, 77, 177)), linear-gradient(125deg, rgba(255,255,255,0) 45%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 53%);
+  color: rgb(250, 250, 255);
+  box-shadow: rgba(0,0,0,0.7) 5px 5px 5px;
+  text-shadow: 0px 0px 3px rgba(255,255,255,0.7);
+  transition: box-shadow 0.25s, text-shaddw 0.25s;
+}
+
+.st-key-main button::after {
+  content: ' ';
+  position: absolute;
+  top: -50%;
+  left: -120%;
+  width: 200%;
+  height: 200%;
+  background-image: linear-gradient(125deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 52%);
+  animation: 4s glint linear backwards infinite;
+  animation-delay: -3s;
+}
+
+@keyframes glint {
+  0% { left: -120%; }
+  8% { left: 50%; }
+  100% { left: 50%; }
+}
+
+
+@keyframes border-glint {
+  0% { background-position: 0px, -250px; }
+  25% { background-position: 0px, -200px; }
+  75% { background-position: 0px, 50px; }
+  100% { background-position: 0px, 50px; }
+}
+
+
+/*animacion de boton salir - redireccion de pagina */
+
+
+.st-key-exit button {
+	width: 200px;	
+	/*width: fit-content;*/
+	font-size: 2rem;
+	position: relative;
+	margin: 2rem;
+	padding: 1rem 1rem;
+	color: rgb(221, 173, 17);
+	border: 3px solid transparent;
+	border-radius: 60px;
+	background-color: rgb(6, 69, 73);
+	background-image: linear-gradient(to bottom right, rgb(10,107,115), rgb(2, 10, 14)), linear-gradient(125deg, rgba(255,255,255,0) 45%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 53%);
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
+	background-size: 100%, 200%;
+	background-position: 0px, -250px;
+	animation: 4s border-glint linear backwards infinite;
+	animation-delay: 1s;
+	box-shadow: rgba(0,0,0,0.6) 8px 8px 8px;
+	text-shadow: 0px 0px 4px rgba(255,255,255,0.1);
+	transition: box-shadow 0.25s, text-shaddw 0.25s;
+	overflow: hidden;
+}
+
+.st-key-exit button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to bottom right, rgb(24, 77, 177), rgb(24, 77, 177)), linear-gradient(125deg, rgba(255,255,255,0) 45%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 53%);
+  color: rgb(250, 250, 255);
+  box-shadow: rgba(0,0,0,0.7) 5px 5px 5px;
+  text-shadow: 0px 0px 3px rgba(255,255,255,0.7);
+  transition: box-shadow 0.25s, text-shaddw 0.25s;
+}
+
+.st-key-exit button::after {
+  content: ' ';
+  position: absolute;
+  top: -50%;
+  left: -120%;
+  width: 200%;
+  height: 200%;
+  background-image: linear-gradient(125deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 52%);
+  animation: 4s glint linear backwards infinite;
+  animation-delay: -3s;
+}
+
+@keyframes glint {
+  0% { left: -120%; }
+  8% { left: 50%; }
+  100% { left: 50%; }
+}
+
+
+@keyframes border-glint {
+  0% { background-position: 0px, -250px; }
+  25% { background-position: 0px, -200px; }
+  75% { background-position: 0px, 50px; }
+  100% { background-position: 0px, 50px; }
+}
+
+
+/*animacion de botones de acceso a otras páginas  */
+
+.st-key-btn-liquid {
+  position: relative;
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FF8C00;
+  background: none;
+  border: 2px solid #646cff;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.st-key-btn-liquid {
+  background: linear-gradient(#646cff 0 0) no-repeat calc(200% - var(--p, 0%))
+    100% / 200% var(--p, 0.2em);
+  transition: 0.3s var(--t, 0s),
+    background-position 0.3s calc(0.3s - var(--t, 0s));
+}
+
+.st-key-btn-liquid:hover {
+  --p: 100%;
+  --t: 0.3s;
+  color:  #FF8C00;
+}
+
+
+/*animacion de botones de acceso a otras páginas  OPCIONAL */
+
+.st-key-btn {
+  --theme-color: #646cff; /* #0ae699 */
+  --s: 10px;                 /* mask corner */
+  --animation-timing: .3s;
+  --pad: 2px;
+
+  font-family: "DM Mono", monospace;
+  font-weight: 400;
+  position: relative;
+  cursor: pointer;
+  appearance: none;
+  color: #FF8C00;
+
+  border: 1px solid rgb(255 255 255 / 20%);
+  padding: 10px 16px;
+  font-size: 16px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  background:
+    linear-gradient(to right, rgb(255 255 255 / 5%), rgb(255 255 255 / 20%));
+
+  transition: background var(--animation-timing) ease,
+              border var(--animation-timing) ease;
+}
+
+/* ⟶ ÍCONO GENERADO AUTOMÁTICAMENTE */
+
+.st-key-btn::after {
+  content: "";
+  font-family: "Material Symbols Outlined";
+  font-weight: 700;
+  font-size: 18px;
+
+  transition: color var(--animation-timing) ease;
+}
+
+/* Borde animado */
+
+.st-key-btn::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+
+  inset: calc(-1 * var(--pad));
+  padding: var(--pad);
+
+  border: 2px solid rgb(216, 161, 9);
+  background: transparent content-box;
+
+  mask:
+    conic-gradient(#000 0 0) content-box,
+    conic-gradient(at var(--s) var(--s), #0000 75%, #000 0)
+    0 0 / calc(100% - var(--s)) calc(100% - var(--s));
+
+  pointer-events: none;
+
+  transition:
+    inset var(--animation-timing) ease,
+    padding var(--animation-timing) ease,
+    border-color var(--animation-timing) ease;
+}
+
+/* Hover */
+
+.st-key-btn:hover {
+  border-color: var(--theme-color);
+  background:
+    linear-gradient(
+      to right,
+      color(from var(--theme-color) srgb r g b / 5%),
+      color(from var(--theme-color) srgb r g b / 20%)
+    );
+
+  --pad: 8px;
+}
+
+.st-key-btn:hover::after {
+  color: var(--theme-color);
+}
+
+.st-key-btn:hover::before {
+  border-color: var(--theme-color);
+}
+
+/*animacion de botones de acceso a otras páginas  OPCIONAL */
+
+.st-key-btn-glitch {
+  position: relative;
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FF8C00;
+  background: none;
+  border: 2px solid #646cff;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.st-key-btn-glitch {
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+}
+
+.st-key-btn-glitch:hover {
+  animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-4px, 4px);
+  }
+  40% {
+    transform: translate(-4px, -4px);
+  }
+  60% {
+    transform: translate(4px, 4px);
+  }
+  80% {
+    transform: translate(4px, -4px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+
+
+
+/*animacion de botones de acceso a otras páginas - OPCIONAL
+ */
+
+/*
+.st-key-btn1 button {	
+	margin-top: 35px;
+	margin-bottom: 35px;
+	border: none;
+	background: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cfilter id='turb2' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.06' numOctaves='3' result='turbulence' seed='1' /%3E%3CfeDisplacementMap in='SourceGraphic' scale='8' /%3E%3CfeOffset in='displaced' dx='-2' dy='-2' /%3E%3C/filter%3E%3Csymbol id='fireContainer'%3E%3Crect x='5' y='5' height='90' width='90' fill='none' stroke='%23fff' stroke-width='2' rx='50' /%3E%3C/symbol%3E%3Cg filter='url(%23turb2)'%3E%3Cuse href='%23fireContainer'%3E%3Canimate attributeName='x' values='0; -1000' dur='100s' begin='0s' repeatCount='indefinite' /%3E%3Canimate attributeName='y' values='0; -2000' dur='100s' begin='0s' repeatCount='indefinite' additive='sum' /%3E%3C/use%3E%3CanimateTransform attributeName='transform' attributeType='XML' type='translate' values='0 0; 1000 2000' dur='100s' begin='0s' repeatCount='indefinite' /%3E%3C/g%3E%3C/svg%3E");
+	background-repeat: no-repeat; /* Prevents the image from repeating */
+    /*background-size: cover;*/ /* Scales the image to cover the entire element */
+    /*background-position: center;
+	color: #f1ce08;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 80px;
+	width: 150px;
+	cursor: pointer;
+}
+.st-key-btn1 button:hover {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cfilter id='turb2' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.06' numOctaves='3' result='turbulence' seed='1' /%3E%3CfeDisplacementMap in='SourceGraphic' scale='8' /%3E%3CfeOffset in='displaced' dx='-2' dy='-2' /%3E%3C/filter%3E%3Csymbol id='fireContainer'%3E%3Crect x='5' y='5' height='90' width='90' fill='none' stroke='%230ff' stroke-width='2' rx='40' /%3E%3C/symbol%3E%3Cg filter='url(%23turb2)'%3E%3Cuse href='%23fireContainer'%3E%3Canimate attributeName='x' values='0; -3000' dur='100s' begin='0s' repeatCount='indefinite' /%3E%3Canimate attributeName='y' values='0; -5000' dur='100s' begin='0s' repeatCount='indefinite' additive='sum' /%3E%3C/use%3E%3CanimateTransform attributeName='transform' attributeType='XML' type='translate' values='0 0; 3000 5000' dur='100s' begin='0s' repeatCount='indefinite' /%3E%3C/g%3E%3C/svg%3E");
+	color: #0ff;
+}
+.st.key-btn1 button:active {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cfilter id='turb2' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.06' numOctaves='3' result='turbulence' seed='1' /%3E%3CfeDisplacementMap in='SourceGraphic' scale='8' /%3E%3CfeOffset in='displaced' dx='-2' dy='-2' /%3E%3C/filter%3E%3Csymbol id='fireContainer'%3E%3Crect x='5' y='5' height='90' width='90' fill='none' stroke='%23f00' stroke-width='2' rx='30' /%3E%3C/symbol%3E%3Cg filter='url(%23turb2)'%3E%3Cuse href='%23fireContainer'%3E%3Canimate attributeName='x' values='0; -6000' dur='100s' begin='0s' repeatCount='indefinite' /%3E%3Canimate attributeName='y' values='0; -10000' dur='100s' begin='0s' repeatCount='indefinite' additive='sum' /%3E%3C/use%3E%3CanimateTransform attributeName='transform' attributeType='XML' type='translate' values='0 0; 6000 10000' dur='100s' begin='0s' repeatCount='indefinite' /%3E%3C/g%3E%3C/svg%3E");
+	color: #f00;
+}
+
+*/

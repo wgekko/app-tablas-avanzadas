@@ -990,7 +990,7 @@ with open("assets/style.css","r", encoding="utf-8") as f:
 st.write("###")
 st.write("---")
 
-with st.expander("Acceso a botones del Menú", expanded=False, icon=":material/auto_stories:", width="stretch"):
+with st.expander("Acceso a opciones del Menú", expanded=False, icon=":material/auto_stories:", width="stretch"):
     # Centrar botones con columnas para acceso a otras páginas
     with st.container(border=True):
             col4, col5, col6 = st.columns([2, 2, 2])
